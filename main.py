@@ -1,13 +1,11 @@
-# задаем двумерный список
-my_list = [
-[3, 4, 1],
-[8, 2, 5],
-[7, 6, 9]
-]
+list_2d = [[3, 5, 2],
+           [10, 2, 7],
+           [4, 1, 9]]
 
-# проходим по каждой строке списка
-for row in my_list:
-# ищем максимальное значение в строке
-max_value = max(row)
-# выводим наибольший элемент в строке
-print(f"Наибольший элемент в строке {row} равен {max_value}")
+for row in list_2d:
+    max_element = row[0]
+    for element in row:
+        if element > max_element:
+            max_element = element
+    print(max_element)
+
